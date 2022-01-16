@@ -44,7 +44,13 @@ public class Produto implements Serializable {
         this.descricao = descricao;
         this.codigo = codigo;
     }
-
+    public boolean diminuirQuantidadeEmEstoque(Long quantidade){
+        if(quantidade > 0) {
+            this.quantidade -=quantidade;
+            return true;
+        } 
+        return false;
+    }
     public Long getId() {
         return id;
     }
